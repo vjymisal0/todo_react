@@ -44,11 +44,16 @@ app.delete("/delete-todo/:id", async (req, res) => {
 )
 
 app.put("/update-todo/:id", async (req, res) => {
-    await todo.findByIdAndUpdate(req.params.id, {
-        title: req.body.title,
-        desription: req.body.desription,
+    console.log(req.body.title)
+    console.log(req.body.description)
 
+    const todoUpdate = await todo.findByIdAndUpdate(req.params.id, {
+        title: req.body.title,
+        description: req.body.description,
     })
+
+    await todoUpdate.save()
+
     res.status(200).json("ToDo updated successfully")
 }
 )
