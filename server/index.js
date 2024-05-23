@@ -2,6 +2,12 @@ const express = require('express')
 const { connectDB } = require('./connection')
 const cors = require('cors');
 const todo = require('./models/todo')
+// env
+
+require('dotenv').config()
+const PORT = process.env.PORT || 3000
+
+
 
 const app = express()
 
@@ -60,7 +66,7 @@ app.put("/update-todo/:id", async (req, res) => {
 
 
 
-app.listen(3000, () => {
+app.listen(PORT, () => {
     console.log('Server is running on http://localhost:3000')
 })
 
