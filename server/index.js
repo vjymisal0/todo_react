@@ -31,7 +31,7 @@ app.post("/add-todo", async (req, res) => {
     res.status(200).json("ToDo created successfully")
 })
 
-app.post("/get-todos", async (req, res) => {
+app.get("/get-todos", async (req, res) => {
     const todos = await todo.find()
     res.status(200).json(todos)
 }
