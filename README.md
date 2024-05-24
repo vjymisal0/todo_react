@@ -2,9 +2,9 @@
 <h2>client side is hosted on 2 different web hosters </h2>
 <ul>
   <li>
-    1. Vercel.app
+   Vercel.app
   </li>
-    <li>2. Netlify.app</li>
+    <li>Netlify.app</li>
 </ul>
 <h3>Server is deployed on render!</h3>
 <br>
